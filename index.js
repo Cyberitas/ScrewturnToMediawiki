@@ -16,8 +16,8 @@ function parseCommandLine() {
     if(process.argv.length !== 4)
         throw new Error(USAGE_INFO)
 
-    return { basedir : path.join(__dirname, process.argv[2])
-           , destdir : path.join(__dirname, process.argv[3])
+    return { basedir : path.resolve(__dirname, process.argv[2])
+           , destdir : path.resolve(__dirname, process.argv[3])
            }
 }
 
